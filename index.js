@@ -24,11 +24,11 @@ app.use(express.json());
 app.use('/uploads', express.static('public/uploads'))
 
 // Create 'uploads' folder if it doesn't exist
-const fs = require("fs");
-const uploadsDir = path.join(__dirname, "uploads");
-if (!fs.existsSync(uploadsDir)) {
-  fs.mkdirSync(uploadsDir);
-}
+// const fs = require("fs");
+// const uploadsDir = path.join(__dirname, "uploads");
+// if (!fs.existsSync(uploadsDir)) {
+//   fs.mkdirSync(uploadsDir);
+// }
 
 // Routes
 const authRoutes = require("./Routes/authRoute");
