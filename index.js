@@ -40,7 +40,7 @@ const notFoundMiddleware = require("./middleware/not-found");
 const errorHandlerMiddleware = require("./middleware/error-handler");
 const auth = require("./middleware/authentication");
 
-app.use(cors({ credentials: true, origin: "*" }));
+app.use(cors({ credentials: true, origin: "*" , methods:["GET","POST","PUT","DELETE"]}));
 
 app.use(express.json({ limit: "10mb" }));
 app.get("/", (req, res) => {
