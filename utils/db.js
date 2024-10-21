@@ -13,7 +13,7 @@ const connectDB = async () => {
 
       // server:{auto_reconnect:true}
     });
-    console.log("Connection to Databse is successful");
+    console.log("Connection to Databse is successfull");
   } catch (error) {
     console.log("Connection to Database is unsuccessfull");
     console.log(error);
