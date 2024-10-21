@@ -11,10 +11,6 @@
       {
          "src": "/(.*)",
          "dest": "/index.js"
-      },
-      {
-         "src": "/uploads/(.*)",
-         "dest": "/public/uploads/$1"
       }
    ]
 }
