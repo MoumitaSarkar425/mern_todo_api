@@ -36,7 +36,7 @@ const signup = async (req, res) => {
       },
     });
   } catch (error) {
-    res.status(500).send({ message: "Internal Server Error", alert: false });
+    res.status(500).send({ message: "Internal Server Error", alert: false, data: error });
   }
 };
 
@@ -154,4 +154,11 @@ const resetPassword = async (req, res) => {
   }
 };
 
-module.exports = { login, signup, forgotPassword, resetPassword };
+
+const testFunc = async (req,res) =>{
+  
+  res
+  .status(200)
+  .send({ message: "Test Function successfully run", alert: true });
+}
+module.exports = { login, signup, forgotPassword, resetPassword , testFunc };
