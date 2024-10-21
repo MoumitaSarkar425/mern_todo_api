@@ -6,6 +6,7 @@ const { error } = require("console");
 const jwt = require("jsonwebtoken");
 const crypto = require("crypto");
 const nodemailer = require("nodemailer");
+const mongoose = require("mongoose");
 
 
 const transporter = nodemailer.createTransport({
@@ -156,9 +157,9 @@ const resetPassword = async (req, res) => {
 
 
 const testFunc = async (req,res) =>{
-  
+  const connectionState = mongoose.connection.readyState;
   res
   .status(200)
-  .send({ message: "Test Function successfully run", alert: true });
+  .send({ message: "Test Function successfully run", alert: true, connectionState: connectionState });
 }
 module.exports = { login, signup, forgotPassword, resetPassword , testFunc };
